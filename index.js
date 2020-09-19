@@ -151,7 +151,8 @@ function init() {
           if (config.steam) {
             sendSteamOffer(status.data.items, status.data.metadata.trade_url);
           }
-          sendMessage(`<@${config.discordUserId}> Deposit offer for ${itemNames.join(', ')} Value price ${itemPrices.join(', ')} accepted, go send go go`, config.discord, config.pushover);
+          else 
+			  sendMessage(`<@${config.discordUserId}> Deposit offer for ${itemNames.join(', ')} Value price ${itemPrices.join(', ')} accepted, go send go go`, config.discord, config.pushover);
           console.log(`${itemNames.join(', ')} item confirmed. price ${itemPrices.join(', ')}`);
         }
         break;
